@@ -4,10 +4,12 @@ This is a standalone **static public website** designed for GitHub Pages. It con
 
 ## Contents
 
-- `index.html` — responsive one-page website (desktop banner and mobile-friendly lockup)
-- `career-agenda-banner.png` — the exact latest banner supplied by the owner
-- `career-agenda-icon.png` — person-only square, cropped from the same banner for mobile screens
-- `favicon.png` — favicon cropped from the approved person icon
+- `index.html`: the one-page site. The logo, the name with a real-text ™, the subtitle and the status are one responsive layout for all screen sizes.
+- `career-agenda-icon.png`: the person-only logo square shown on the page.
+- `career-agenda-banner.png`: the approved banner. It is used as the social-share preview image (`og:image`) and is not displayed on the page.
+- `favicon.png`: the browser tab icon.
+- `fonts/`: Montserrat (500/600/700, Latin), self-hosted under the SIL Open Font License (`fonts/OFL-Montserrat.txt`).
+- `CNAME`: the custom domain, careeragenda.app.
 
 ## Safe setup
 
