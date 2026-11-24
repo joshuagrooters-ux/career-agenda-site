@@ -54,13 +54,40 @@
       .summary p { font-size:1rem; }
     }
     @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; animation:none !important; } }
+  
+/* Fit the landing page within a normal desktop screen */
+@media (min-width: 721px) {
+  main {
+    flex: 1 1 auto;
+    min-height: 0;
+    margin: 0 auto;
+    padding: 8px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 60dvh;
+    object-fit: contain;
+  }
+
+  footer {
+    flex-shrink: 0;
+    padding: 10px 16px;
+  }
+}
   </style>
 </head>
 <body>
   <main>
     <h1 class="sr-only">Career Agenda — Job Search Manager</h1>
     <p class="sr-only">In Development</p>
-    <img class="hero" width="1672" height="941" src="career-agenda-banner.png"
+    <img class="hero" width="1672" height="941" 
+src="career-agenda-banner.png?v=20261124-tm"
       alt="Career Agenda — Job Search Manager. In Development. Colorful forward-moving person symbol on a dark navy background.">
     <div class="mobile-hero" aria-hidden="true">
       <img width="540" height="537" src="career-agenda-icon.png" alt="">
