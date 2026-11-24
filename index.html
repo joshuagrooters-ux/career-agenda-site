@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#06153a">
   <title>Career Agenda | Job Search Manager — In Development</title>
   <meta name="description" content="Career Agenda is a job search management application in development. Organize applications, professional contacts, and follow-ups in one place.">
@@ -12,186 +12,61 @@
   <meta property="og:url" content="https://careeragenda.app/">
   <meta property="og:title" content="Career Agenda | Job Search Manager">
   <meta property="og:description" content="A simpler way to organize job applications, professional contacts, and follow-ups. In Development.">
-  <meta property="og:image" content="https://careeragenda.app/career-agenda-banner.png">
+  <meta property="og:image" content="https://careeragenda.app/career-agenda-hero-2026-11-24.png">
   <meta property="og:image:width" content="1672">
   <meta property="og:image:height" content="941">
   <meta property="og:image:alt" content="Career Agenda — Job Search Manager. In Development.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
-  <link rel="apple-touch-icon" href="career-agenda-icon.png">
-  <link rel="preload" href="fonts/montserrat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="apple-touch-icon" href="career-agenda-icon-2026-11-24.png">
   <style>
-    /* Montserrat, self-hosted (SIL Open Font License; see fonts/OFL-Montserrat.txt) */
-    @font-face { font-family: "Montserrat"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/montserrat-latin-500-normal.woff2") format("woff2"); }
-    @font-face { font-family: "Montserrat"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/montserrat-latin-600-normal.woff2") format("woff2"); }
-    @font-face { font-family: "Montserrat"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/montserrat-latin-700-normal.woff2") format("woff2"); }
-
-    /* Layout: one screen — brand lockup centered, footer pinned to the bottom of the viewport. */
-    :root {
-      color-scheme: dark;
-      --navy: #06153a;
-      --ink: #f6f9ff;
-      --sub: #dbeaff;
-      --muted: #c4d6f0;
-      --footer: #a7bcdb;
-      --line: rgba(165, 203, 247, .18);
-      --pill: #17488c;
-      --pill-edge: rgba(125, 184, 255, .28);
-      --gradient: linear-gradient(90deg, #087df4 0%, #00def2 26%, #21e6a2 48%, #deed00 71%, #ff7013 100%);
-      --font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      --icon: clamp(150px, min(24vw, 36dvh), 300px);
+    @font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url('fonts/montserrat-latin-500-normal.woff2') format('woff2')}
+    @font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url('fonts/montserrat-latin-600-normal.woff2') format('woff2')}
+    @font-face{font-family:Montserrat;font-style:normal;font-weight:700;font-display:swap;src:url('fonts/montserrat-latin-700-normal.woff2') format('woff2')}
+    :root{color-scheme:dark;--bg:#051639;--ink:#f5f9ff;--muted:#bfd2e9;--line:rgba(175,205,255,.2);--gradient:linear-gradient(90deg,#097fff,#00dcef,#24dda7,#e9f100,#ff7514)}
+    *,*::before,*::after{box-sizing:border-box}
+    html{background:var(--bg)}
+    body{margin:0;min-height:100vh;min-height:100dvh;display:grid;grid-template-rows:minmax(0,1fr) auto;background:linear-gradient(160deg,#06133c,#041638);color:var(--ink);font-family:Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}
+    main{min-height:0;display:grid;place-items:center;padding:12px 24px}
+    .desktop-hero{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100dvh - 105px);object-fit:contain}
+    .mobile-hero{display:none}
+    footer{border-top:1px solid var(--line);padding:12px 18px max(14px,env(safe-area-inset-bottom,14px));text-align:center;color:#bfd0e8;font-size:.77rem;line-height:1.55}
+    footer p{margin:0}footer .group{white-space:nowrap}footer .dot{padding:0 .55em}footer sup{font-size:.67em;line-height:0}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:720px){
+      body{grid-template-rows:minmax(0,1fr) auto}
+      main{padding:30px max(20px,env(safe-area-inset-left,20px)) 30px}
+      .desktop-hero{display:none}
+      .mobile-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:17px;width:100%;max-width:500px}
+      .mobile-hero img{width:min(52vw,205px);height:auto;aspect-ratio:1;object-fit:contain}
+      h1{font-size:clamp(2rem,10vw,3.2rem);line-height:1.03;letter-spacing:-.025em;font-weight:700;margin:2px 0 0}
+      h1 sup{font-size:.32em;vertical-align:super;margin-left:.04em}
+      .subtitle{margin:0;color:#dce9ff;font-size:clamp(1rem,4.9vw,1.4rem)}
+      .gradient-line{width:min(83%,300px);height:5px;border-radius:8px;background:var(--gradient)}
+      .status{margin:0;border-radius:100px;padding:11px 23px;background:#19498a;color:#fff;font-size:1rem}
+      .description{font-size:.93rem;line-height:1.6;max-width:39ch;color:var(--muted);margin:6px 0 0}
+      footer{font-size:.72rem}
+      footer .sep{display:none}footer .group{display:block}
     }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { background: var(--navy); }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: grid;
-      grid-template-rows: 1fr auto;
-      font-family: var(--font);
-      color: var(--ink);
-      background:
-        radial-gradient(ellipse 70% 45% at 100% 100%, rgba(0, 170, 230, .14) 0%, transparent 70%),
-        radial-gradient(ellipse 75% 50% at 55% 0%, #092b69 0%, transparent 72%),
-        linear-gradient(160deg, #061238 0%, #061636 65%, #082252 100%);
-      background-color: var(--navy);
-    }
-
-    main {
-      display: grid;
-      place-items: center;
-      align-content: center;
-      gap: clamp(20px, 4dvh, 40px);
-      padding-block: clamp(24px, 5dvh, 56px);
-      padding-left: max(20px, env(safe-area-inset-left, 0px));
-      padding-right: max(20px, env(safe-area-inset-right, 0px));
-    }
-
-    .lockup {
-      display: flex;
-      align-items: center;
-      gap: clamp(24px, 4vw, 56px);
-      max-width: 1100px;
-    }
-    .lockup img {
-      display: block;
-      width: var(--icon);
-      height: var(--icon);
-      flex: 0 0 auto;
-      border-radius: 22%;
-    }
-    .brand { display: flex; flex-direction: column; align-items: flex-start; gap: clamp(10px, 1.6dvh, 16px); min-width: 0; }
-
-    h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: clamp(2.4rem, min(5.6vw, 9.5dvh), 5rem);
-      line-height: 1.02;
-      letter-spacing: -.02em;
-      white-space: nowrap;
-    }
-    /* Trademark: real text, superscript at the upper right of "Agenda" */
-    h1 .tm {
-      font-size: .34em;
-      font-weight: 600;
-      letter-spacing: 0;
-      vertical-align: top;
-      position: relative;
-      top: .18em;
-      margin-left: .08em;
-      line-height: 1;
-    }
-    .subtitle {
-      margin: 0;
-      font-weight: 500;
-      font-size: clamp(1.15rem, min(2.4vw, 4.2dvh), 2.15rem);
-      color: var(--sub);
-    }
-    .gradient-line {
-      width: 100%;
-      height: 5px;
-      border-radius: 20px;
-      background: var(--gradient);
-      margin-block: clamp(2px, .8dvh, 8px);
-    }
-    .status {
-      margin: 0;
-      display: inline-block;
-      padding: .55em 1.35em;
-      border-radius: 999px;
-      background: var(--pill);
-      border: 1px solid var(--pill-edge);
-      color: #fff;
-      font-weight: 500;
-      font-size: clamp(1rem, min(1.5vw, 2.6dvh), 1.35rem);
-    }
-
-    .summary {
-      margin: 0;
-      max-width: 62ch;
-      text-align: center;
-      font-weight: 500;
-      font-size: clamp(.98rem, 1.25vw, 1.12rem);
-      line-height: 1.6;
-      color: var(--muted);
-      text-wrap: balance;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding-block: 12px calc(14px + env(safe-area-inset-bottom, 0px));
-      padding-left: max(16px, env(safe-area-inset-left, 0px));
-      padding-right: max(16px, env(safe-area-inset-right, 0px));
-      text-align: center;
-      color: var(--footer);
-      font-size: .8rem;
-      line-height: 1.7;
-    }
-    footer p { margin: 0; }
-    footer .group { white-space: nowrap; }
-    footer .dot { padding-inline: .55em; }
-    footer sup { font-size: .7em; line-height: 0; }
-
-    /* Phones and narrow windows: stack the lockup; let the page scroll naturally if needed. */
-    @media (max-width: 720px) {
-      :root { --icon: min(56vw, 240px); }
-      .lockup { flex-direction: column; text-align: center; gap: 22px; }
-      .brand { align-items: center; }
-      h1 { font-size: clamp(2.3rem, 10.5vw, 3.6rem); }
-      .subtitle { font-size: clamp(1.15rem, 4.8vw, 1.45rem); }
-      .gradient-line { width: min(80%, 310px); }
-      .status { font-size: 1.02rem; }
-      .summary { font-size: 1rem; }
-      footer .sep { display: none; }
-      footer .group { display: block; }
-    }
-    @media (max-width: 360px) {
-      h1 { white-space: normal; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-    }
+    @media(max-width:350px){main{padding-block:16px}.mobile-hero{gap:12px}h1{font-size:clamp(1.8rem,9vw,2.4rem)}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
   </style>
 </head>
 <body>
   <main>
-    <div class="lockup">
-      <img src="career-agenda-icon.png" width="540" height="537" alt="Career Agenda logo: a colorful person moving forward">
-      <div class="brand">
-        <h1>Career Agenda<span class="tm">™</span></h1>
-        <p class="subtitle">Job Search Manager</p>
-        <div class="gradient-line" aria-hidden="true"></div>
-        <p class="status">In Development</p>
-      </div>
+    <h1 class="sr-only">Career Agenda™ — Job Search Manager — In Development</h1>
+    <img class="desktop-hero" src="career-agenda-hero-2026-11-24.png" width="1672" height="941" alt="Career Agenda™ — Job Search Manager. In Development. A forward-moving multicolor person logo and a statement about organizing job applications, contacts, and follow-ups.">
+    <div class="mobile-hero" aria-hidden="true">
+      <img src="career-agenda-icon-2026-11-24.png" width="512" height="512" alt="">
+      <h1>Career Agenda<sup>™</sup></h1>
+      <p class="subtitle">Job Search Manager</p>
+      <div class="gradient-line"></div>
+      <p class="status">In Development</p>
+      <p class="description">A simpler way to organize job applications, professional contacts, and follow-ups. Our web application is currently in development.</p>
     </div>
-    <p class="summary">A simpler way to organize job applications, professional contacts, and follow-ups. Our web application is currently in development.</p>
   </main>
   <footer>
-    <p>
-      <span class="group">Career Agenda<sup>™</sup><span class="dot" aria-hidden="true">·</span>Job Search Manager</span><span class="sep dot" aria-hidden="true">·</span><span class="group">In Development<span class="dot" aria-hidden="true">·</span>© 2026 Career Agenda</span>
-    </p>
+    <p><span class="group">Career Agenda<sup>™</sup><span class="dot" aria-hidden="true">·</span>Job Search Manager</span><span class="sep dot" aria-hidden="true">·</span><span class="group">In Development<span class="dot" aria-hidden="true">·</span>© 2026 Career Agenda</span></p>
   </footer>
 </body>
 </html>
